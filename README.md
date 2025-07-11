@@ -34,9 +34,22 @@
 
 ## Compatibility
 
-This starter is compatible with versions >= 2 of `@medusajs/medusa`. 
+This starter is compatible with versions >= 2 of `@medusajs/medusa`.
 
 ## Getting Started
+
+### Пример переменных окружения для MinIO и Redis
+
+```env
+# Redis
+REDIS_URL=redis://localhost:6379
+
+# MinIO
+MINIO_ENDPOINT=http://localhost:9000
+MINIO_ACCESS_KEY=minioadmin
+MINIO_SECRET_KEY=minioadmin
+MINIO_BUCKET=medusa-files
+```
 
 Visit the [Quickstart Guide](https://docs.medusajs.com/learn/installation) to set up a server.
 

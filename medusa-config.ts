@@ -13,6 +13,36 @@ export default defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
   },
+  modules: [
+    {
+      resolve: "@medusajs/cache-redis",
+      options: {
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    {
+      resolve: "@medusajs/event-bus-redis",
+      options: {
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    {
+      resolve: "@medusajs/workflow-engine-redis",
+      options: {
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    {
+      resolve: "@medusajs/file-s3",
+      options: {
+        endpoint: process.env.MINIO_ENDPOINT,
+        accessKeyId: process.env.MINIO_ACCESS_KEY,
+        secretAccessKey: process.env.MINIO_SECRET_KEY,
+        bucket: process.env.MINIO_BUCKET,
+        s3ForcePathStyle: true, // обязательно для MinIO
+      },
+    },
+  ],
   //plugins: [
   //  {
   //    resolve: "cart-bundle-check",

@@ -32,7 +32,13 @@
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
     "awilix": "^8.0.1",
-    "pg": "^8.13.0"
+    "pg": "^8.13.0",
+    "minio": "^7.0.36",
+    "ioredis": "^5.3.2",
+    "@medusajs/cache-redis": "^2.8.6",
+    "@medusajs/event-bus-redis": "^2.8.6",
+    "@medusajs/workflow-engine-redis": "^2.8.6",
+    "@medusajs/file-s3": "^2.8.6"
   },
   "devDependencies": {
     "@medusajs/medusa-js": "^6.1.10",
